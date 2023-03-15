@@ -41,7 +41,7 @@ Installer shows all detected Maya versions
 To uninstall type "Uninstall Roadkill" in your Start menu and run the uninstaller
 
 # Remarks
-This was put together by Marcus Krautwurst from [:orange_square: Monster Puppet Corporation](https://www.monster-puppet.com/)
+This was put together by Marcus Krautwurst from [:orange_square: Monster Puppet Corporation](https://www.monster-puppet.com/) in Collaboration with [Theorycraft Games](https://www.theorycraftgames.com/)
 
 ![Monster Puppet Corporation](https://github.com/monster-puppet/RoadKill/blob/main/instructions/logo_animated_black_bg.gif?raw=true)
 
