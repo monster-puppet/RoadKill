@@ -37,7 +37,7 @@ Installer shows all detected Maya versions
 :godmode: You can now use Roadkill. Thank you to the creators of this amazing plugin!
 
 
-# :x: Uninstalling
+# :wastebasket: Uninstalling
 To uninstall type "Uninstall Roadkill" in your Start menu and run the uninstaller
 
 
