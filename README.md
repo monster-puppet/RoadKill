@@ -2,7 +2,14 @@
 
 # Installer
 
-In the release folder is an installer that installs Roadkill for all maya versions from 2018-2023
+In the release folder is an installer that installs the maya module and all its necessary files
+
+### Supported versions: 
+- Maya 2018
+- Maya 2019
+- Maya 2020
+- Maya 2022
+- Maya 2023 
 
 
 ### Run the installer 
