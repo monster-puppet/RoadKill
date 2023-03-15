@@ -1,18 +1,23 @@
-# Roadkill Pro for Maya 2018-2023
+# :m: Roadkill Pro for Maya 2018-2023
 
-# Installer
+# :bucket: Installer
 
 In the release folder is an installer that installs the maya module and all its necessary files
 
 ### Supported versions: 
-- Maya 2018
-- Maya 2019
-- Maya 2020
-- Maya 2022
-- Maya 2023 
+:green_square: Maya 2018
+
+:green_square: Maya 2019
+
+:green_square: Maya 2020
+
+:green_square: Maya 2022
+
+:green_square: Maya 2023 
 
 
-### Run the installer 
+
+### :cd: Run the installer 
 
 ![Step 1](https://github.com/monster-puppet/RoadKill/blob/main/instructions/installer_01.png?raw=true)
 
@@ -21,7 +26,7 @@ Installer shows all detected Maya versions
 ![Step 2](https://github.com/monster-puppet/RoadKill/blob/main/instructions/installer_02.png?raw=true)
 
 
-### Load plugin
+### :hourglass: Load plugin
 - Open Maya
 - Go to Windows -> Settings -> Preferences -> Plugin Manager
 - Enable load and autoload checkbox
@@ -32,5 +37,8 @@ Installer shows all detected Maya versions
 You can now use Roadkill. Thank you to the creators of this amazing plugin!
 
 
-# Uninstalling 
+# :x: Uninstalling
 To uninstall type "Uninstall Roadkill" in your Start menu and run the uninstaller
+
+
+This was put together by Marcus Krautwurst from [:orange_square: Monster Puppet Corporation](https://www.monster-puppet.com/)
