@@ -1,4 +1,4 @@
-# :m: Roadkill Pro for Maya 2018-2023
+# :m: Roadkill Pro for Autodesk Maya 2018-2023
 
 # :bucket: Installer
 
@@ -34,7 +34,7 @@ Installer shows all detected Maya versions
 ![Step 3](https://github.com/monster-puppet/RoadKill/blob/main/instructions/installer_03.png?raw=true)
 
 
-You can now use Roadkill. Thank you to the creators of this amazing plugin!
+:godmode: You can now use Roadkill. Thank you to the creators of this amazing plugin!
 
 
 # :x: Uninstalling
