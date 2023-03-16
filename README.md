@@ -18,7 +18,7 @@ In the release folder is an installer that installs the maya module and all its 
 
 
 ### :cd: Option A: Run the installer 
-Some Windows 10 users reported problems using the installer. In that case do a manual install, instructions below
+Some Windows 10 users reported problems using the installer. In that case do a manual install, instructions below in the next step
 
 ![Installer problem](https://github.com/monster-puppet/RoadKill/blob/main/instructions/problem_installer.png?raw=true)
 
