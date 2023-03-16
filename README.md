@@ -30,7 +30,7 @@ Installer shows all detected Maya versions
 
 ### :cd: Option B: Run the manual install
 
-- Download the folder **"manual install"**
+- Download the folder **"manual_install"**
 - Move the **Roadkill.mod** to **C:\Users\USERNAME\Documents\maya\modules** (create the folder if it does not exist)
 - In **C:/Program Files (x86)/** create a new folder called **Roadkill**
 - Copy the plugins and scripts folder into this folder **C:/Program Files (x86)/Roadkill/**
