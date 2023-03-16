@@ -1,0 +1,81 @@
+// Roadkill Professional version RC 1.042
+
+global proc RoadkillProMinimiseOptions()
+{
+	if( `window -exists RKMiniWindow` ) 
+	{
+		return;
+	}
+
+	int $RKiterations = 50;
+
+	if ( `optionVar -exists rkMinIterations` ) 
+		$RKiterations = `optionVar -q rkMinIterations`;
+	else 
+		optionVar -intValue rkMinIterations $RKiterations;
+
+
+	window -widthHeight 300 110 -rtf 1 -s 0 -title "Roadkill Minimise Stretch Options" RKMiniWindow;
+
+	columnLayout ColumnLayout;
+	columnLayout -adjustableColumn true;
+		frameLayout -label "Shell Options" -labelAlign "center";
+
+		rowColumnLayout -numberOfColumns 3
+			-columnWidth 1 60
+	      		-columnWidth 2 110
+			-columnWidth 3 30;
+
+			text -height 5 -label " ";
+			text -height 5 -label " ";
+			text -height 5 -label " ";
+
+			text -label " ";
+			text -label "Minimise Iterations";
+                  	intField -width 40 -minValue 1 -maxValue 200 -value $RKiterations -ed 1 RKIterationField;
+
+		setParent ..;
+
+	setParent ..;
+
+
+	text -height 5 -label " ";
+
+	rowLayout -columnAlign3 "center" "center" "center" -numberOfColumns 3;
+	
+	button -height 30 -width 95 -label "Minimise" -command RKMinimise;
+	button -height 30 -width 95 -label "Apply" -command RKApplyMinimise;
+	button -height 30 -width 95 -label "Cancel" -command ("deleteUI -window RKMiniWindow");
+
+	showWindow RKMiniWindow;
+}
+
+
+
+global proc RKMinimise()
+{
+	int $RKiterations;
+	int $RKislandUpright;
+	$RKiterations = `intField -q -value RKIterationField`;
+
+	optionVar -intValue rkMinIterations $RKiterations;
+	$RKislandUpright = `optionVar -q rkIslandUpright`; 
+
+	deleteUI -window RKMiniWindow;
+	string $cmd = "RoadkillPro -function MINIMISE -s " + $RKiterations + " -u " + $RKislandUpright;
+	evalEcho $cmd;
+}
+
+
+global proc RKApplyMinimise()
+{
+	int $RKiterations;
+	int $RKislandUpright;
+	$RKiterations = `intField -q -value RKIterationField`;
+
+	optionVar -intValue rkMinIterations $RKiterations;
+	$RKislandUpright = `optionVar -q rkIslandUpright`; 
+
+	string $cmd = "RoadkillPro -function MINIMISE -s " + $RKiterations + " -u " + $RKislandUpright;
+	evalEcho $cmd;				// Execute The Command
+}

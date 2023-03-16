@@ -1,0 +1,29 @@
+// Roadkill Professional version 1.042
+
+global proc RoadkillProGeometric()
+{
+	int $RKislandScale = 10;
+	int $RKislandUpright = 1;
+	int $RKpackAllInOne = 0;
+	
+	if ( `optionVar -exists rkIslandScale` ) 
+		$RKislandScale = `optionVar -q rkIslandScale`; 
+	else 
+		optionVar -intValue rkIslandScale $RKislandScale; 
+
+
+	if ( `optionVar -exists rkIslandUpright` ) 
+		$RKislandUpright = `optionVar -q rkIslandUpright`; 
+	else 
+		optionVar -intValue rkIslandUpright $RKislandUpright; 
+
+
+	if ( `optionVar -exists rkPackAllInOne` ) 
+		$RKpackAllInOne = `optionVar -q rkPackAllInOne`; 
+	else 
+		optionVar -intValue rkPackAllInOne $RKpackAllInOne; 
+
+
+	string $cmd = "RoadkillPro -function GEOM -s " + $RKislandScale + " -u " + $RKislandUpright + " -i " + $RKpackAllInOne;
+	evalEcho $cmd;
+}

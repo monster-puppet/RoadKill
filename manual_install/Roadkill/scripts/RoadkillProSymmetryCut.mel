@@ -1,0 +1,22 @@
+// Roadkill Professional version 1.042
+
+global proc RoadkillProSymmetryCut()
+{
+	int $RKislandScale = 10;
+	int $RKislandUpright = 1;
+	
+	if ( `optionVar -exists rkIslandScale` ) 
+		$RKislandScale = `optionVar -q rkIslandScale`; 
+	else 
+		optionVar -intValue rkIslandScale $RKislandScale; 
+
+
+	if ( `optionVar -exists rkIslandUpright` ) 
+		$RKislandUpright = `optionVar -q rkIslandUpright`; 
+	else 
+		optionVar -intValue rkIslandUpright $RKislandUpright; 
+
+
+	string $cmd = "RoadkillPro -function SYMCUT -s " + $RKislandScale + " -u " + $RKislandUpright;
+	evalEcho $cmd;
+}

@@ -1,0 +1,168 @@
+// Roadkill Professional version 1.044
+
+global proc RoadkillProPackOptions()
+{
+	if( `window -exists RKPackOptionsWindow` ) 
+	{
+		return;
+	}
+
+	int $RKislandScale = 10;
+	int $RKislandUpright = 1;
+	int $RKpackAllInOne = 0;
+	int $RKouterBorder = 0;
+	int $RKouterBorderPixels = 4;
+	int $RKouterBorderTMap = 1024;
+
+	if ( `optionVar -exists rkIslandScale` ) 
+		$RKislandScale = `optionVar -q rkIslandScale`; 
+	else 
+		optionVar -intValue rkIslandScale $RKislandScale; 
+
+
+	if ( `optionVar -exists rkIslandUpright` ) 
+		$RKislandUpright = `optionVar -q rkIslandUpright`; 
+	else 
+		optionVar -intValue rkIslandUpright $RKislandUpright; 
+
+
+	if ( `optionVar -exists rkPackAllInOne` ) 
+		$RKpackAllInOne = `optionVar -q rkPackAllInOne`; 
+	else 
+		optionVar -intValue rkPackAllInOne $RKpackAllInOne; 
+
+
+
+	if ( `optionVar -exists rkOuterBorder` ) 
+		$RKouterBorder = `optionVar -q rkOuterBorder`; 
+	else 
+		optionVar -intValue rkOuterBorder $RKouterBorder; 
+		
+
+	if ( `optionVar -exists rkOuterBorderPixels` ) 
+		$RKouterBorderPixels = `optionVar -q rkOuterBorderPixels`; 
+	else 
+		optionVar -intValue rkOuterBorderPixels $RKouterBorderPixels; 
+
+
+	if ( `optionVar -exists rkOuterBorderTMap` ) 
+		$RKouterBorderTMap = `optionVar -q rkOuterBorderTMap`; 
+	else 
+		optionVar -intValue rkOuterBorderTMap $RKouterBorderTMap; 
+
+
+	window -widthHeight 300 120 -rtf 1 -s 0 -title "Roadkill Pack UVs Options" RKPackOptionsWindow;
+	columnLayout ColumnLayout;
+	columnLayout -adjustableColumn true;
+		frameLayout -label "Shell Options" -labelAlign "center";
+
+		columnLayout;
+
+			separator -style "none";
+
+			checkBoxGrp -ncb 1 -label "Upright Shells" -value1 $RKislandUpright RKIslandUprightCheckbox;
+			checkBoxGrp -ncb 1 -label "Pack onto one map" -value1 $RKpackAllInOne RKAllInOneCheckbox;
+
+
+			separator -style "none";
+
+			intFieldGrp
+				-nf 1
+				-label "Shell Border Scale" - extraLabel "%"
+				-value1 $RKislandScale
+				RKBorderScaleValue;
+
+			separator -style "none";
+
+		setParent ..;
+
+	setParent ..;
+	
+	
+	frameLayout -label "Outer Border Options" -labelAlign "center";
+		columnLayout;
+
+			separator -style "none";
+			
+			checkBoxGrp -ncb 1 -label "Add Outer Border" -value1 $RKouterBorder RKOuterBorderCheckbox;
+			separator -style "none";
+			
+			intFieldGrp -nf 1 -label "Border of" - extraLabel "Pixels" -value1 $RKouterBorderPixels RKBorderPixelsValue;
+			intFieldGrp -nf 1 -label "using" - extraLabel "Texture" -value1 $RKouterBorderTMap RKBorderTMapValue;
+			
+			setParent ..;
+
+	setParent ..;
+	
+
+
+	text -height 5 -label " ";
+
+	rowLayout -columnAlign3 "center" "center" "center" -numberOfColumns 3;
+	
+	button -height 30 -width 95 -label "Pack" -command RKPack;
+	button -height 30 -width 95 -label "Apply" -command RKPackApply;
+	button -height 30 -width 95 -label "Cancel" -command ("deleteUI -window RKPackOptionsWindow");
+
+	showWindow RKPackOptionsWindow;
+}
+
+
+
+
+global proc RKPack()
+{
+	int $RKislandScale;
+	int $RKislandUpright;
+	int $RKpackAllInOne;
+	int $RKouterBorder;
+	int $RKouterBorderPixels;
+	int $RKouterBorderTMap;
+	
+	$RKislandScale = `intFieldGrp -q -value1 RKBorderScaleValue`;
+	$RKislandUpright = `checkBoxGrp -q -value1 RKIslandUprightCheckbox`;
+	$RKpackAllInOne = `checkBoxGrp -q -value1 RKAllInOneCheckbox`;
+	
+	$RKouterBorder = `checkBoxGrp -q -value1 RKOuterBorderCheckbox`;
+	$RKouterBorderPixels = `intFieldGrp -q -value1 RKBorderPixelsValue`;
+	$RKouterBorderTMap = `intFieldGrp -q -value1 RKBorderTMapValue`;
+	
+	optionVar -intValue rkIslandScale $RKislandScale;
+	optionVar -intValue rkIslandUpright $RKislandUpright;
+	optionVar -intValue rkPackAllInOne $RKpackAllInOne;
+	
+	optionVar -intValue rkOuterBorder $RKouterBorder;
+	optionVar -intValue rkOuterBorderPixels $RKouterBorderPixels;
+	optionVar -intValue rkOuterBorderTMap $RKouterBorderTMap;
+	
+	deleteUI -window RKPackOptionsWindow;
+	string $cmd = "RoadkillPro -function PACK -s " + $RKislandScale + " -u " + $RKislandUpright + " -i " + $RKpackAllInOne;
+	evalEcho $cmd;				// Execute The Command
+}
+
+
+global proc RKPackApply()
+{
+	int $RKislandScale;
+	int $RKislandUpright;
+	int $RKpackAllInOne;
+	$RKislandScale = `intFieldGrp -q -value1 RKBorderScaleValue`;
+	$RKislandUpright = `checkBoxGrp -q -value1 RKIslandUprightCheckbox`;
+	$RKpackAllInOne = `checkBoxGrp -q -value1 RKAllInOneCheckbox`;
+
+	$RKouterBorder = `checkBoxGrp -q -value1 RKOuterBorderCheckbox`;
+	$RKouterBorderPixels = `intFieldGrp -q -value1 RKBorderPixelsValue`;
+	$RKouterBorderTMap = `intFieldGrp -q -value1 RKBorderTMapValue`;
+
+	optionVar -intValue rkIslandScale $RKislandScale;
+	optionVar -intValue rkIslandUpright $RKislandUpright;
+	optionVar -intValue rkPackAllInOne $RKpackAllInOne;
+	
+	optionVar -intValue rkOuterBorder $RKouterBorder;
+	optionVar -intValue rkOuterBorderPixels $RKouterBorderPixels;
+	optionVar -intValue rkOuterBorderTMap $RKouterBorderTMap;
+
+	string $cmd = "RoadkillPro -function PACK -s " + $RKislandScale + " -u " + $RKislandUpright + " -i " + $RKpackAllInOne;
+	evalEcho $cmd;				// Execute The Command
+}
+
