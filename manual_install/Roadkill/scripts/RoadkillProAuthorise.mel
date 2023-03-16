@@ -1,0 +1,96 @@
+// Roadkill Professional version 1.042
+
+global proc RoadkillProAuthorise()
+{
+	if( `window -exists RKAuthoWindow2` ) 
+	{
+		return;
+	}
+
+
+	string $RKName = "Trial";
+	string $RKCompany = "Trial";
+	string $RKDuration;
+	string $RKSeats;
+
+	if ( `optionVar -exists rkLicenseName` )
+		$RKName = `optionVar -q rkLicenseName`;
+	else
+		optionVar -stringValue rkLicenseName $RKName;
+		
+	if ( `optionVar -exists rkLicenseCompany` )
+		$RKCompany = `optionVar -q rkLicenseCompany`;
+	else
+		optionVar -stringValue rkLicenseCompany $RKCompany;
+		
+	if ( `optionVar -exists rkDuration` )
+		$RKDuration = `optionVar -q rkDuration`;
+	else
+		optionVar -stringValue rkDuration $RKDuration;
+		
+	if ( `optionVar -exists rkSeats` )
+		$RKSeats = `optionVar -q rkSeats`;
+	else
+		optionVar -stringValue rkSeats $RKSeats;
+		
+			
+
+	window -widthHeight 400 300 -resizeToFitChildren true -title "Roadkill Professional Authorisation" RKAuthoWindow2;
+
+	columnLayout ColumnLayout;
+	columnLayout -adjustableColumn true -rowSpacing 5 -backgroundColor 1.0 1.0 1.0 ;
+
+		picture -image "RoadkillProLogo.xpm" -width 380 -height 114 -backgroundColor 1.0 1.0 1.0;
+		frameLayout -borderVisible 0 -marginHeight 5 -marginWidth 5 -label "" -labelAlign "center" -borderStyle "etchedIn" -backgroundColor 1.0 1.0 1.0 ;
+
+		rowColumnLayout -numberOfColumns 2
+     		-columnWidth 1 130
+            -columnWidth 2 250;
+
+			text -backgroundColor 1.0 1.0 1.0  -label "Name";
+                  	textField -width 250 -text $RKName -ed 0 RKNameField;
+
+			text -backgroundColor 1.0 1.0 1.0 -label "Company";
+                  	textField -width 250 -text $RKCompany -ed 0 RKCompanyField;
+                  	
+			text -backgroundColor 1.0 1.0 1.0 -label "Seat Count";
+					textField -width 250 -text $RKSeats -ed 0 RKSeatsField;
+                  	
+			text -backgroundColor 1.0 1.0 1.0 -label "Expires On";
+                  	textField -width 250 -text $RKDuration -ed 0 RKDurationField;
+
+
+		setParent ..;
+
+	setParent ..;
+
+
+	//text -height 5 -label " ";
+
+	rowLayout -backgroundColor 1.0 1.0 1.0 -columnAlign3 "center" "center" "center" -numberOfColumns 3
+		-columnWidth 1 100
+        -columnWidth 1 200
+		-columnWidth 2 100;
+
+	button -height 25 -width 90 -label "Authorise" -command DoRKAuthorise;
+    text -backgroundColor 1.0 1.0 1.0 -height 5 -label " ";
+	button -height 25 -width 90 -label "Close" -command ("deleteUI -window RKAuthoWindow2");
+
+
+	showWindow RKAuthoWindow2;
+}
+
+
+
+
+global proc DoRKAuthorise()
+{
+	string $RKAuth;
+	$RKAuth = `fileDialog -dm "*.RKP"`;		//`textField -q -text RKAuthoField`;
+
+
+	string $cmd = "RoadkillAuth -function AUTHORISE -authcode \"" + $RKAuth + "\"";
+	evalEcho $cmd;				// Execute The Command
+}
+
+

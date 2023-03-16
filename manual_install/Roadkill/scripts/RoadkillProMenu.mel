@@ -1,0 +1,120 @@
+// Roadkill Professional version  1.044
+
+
+global proc string AddRoadkillMenuItems()
+{
+	//global string $gPolygonsMenus[];
+	global int $gRoadkillItemAddTest;
+	string $parentMenu = RoadkillGetUVMenu();
+
+	if ($gRoadkillItemAddTest == 0) 	// test if the new menu item already exists
+	{
+		setParent -menu $parentMenu;
+		menuItem -divider true;
+		menuItem -label "Roadkill Geometric"
+			-annotation ("Unwrap and Pack Geometric Object(s) UVs")
+ 			-c "RoadkillProGeometric" m_RoadkillGeometric;
+
+		menuItem -label "Roadkill Organic"
+			-annotation ("Unwrap and Pack Organic Object(s) UVs")
+			-c "RoadkillProOrganic" m_RoadkillOrganic;
+
+		menuItem -label "Roadkill Straighten"
+			-annotation ("Straighten a quad mesh object(s) UVs")
+			-c "RoadkillProStraighten" m_RoadkillStraighten;
+
+
+		menuItem -label "Roadkill Minimise Stretch"
+			-annotation ("Minimise stretch on selected islands(s) UVs")
+			-c "RoadkillProMinimise" m_RoadkillMinimise;
+
+		menuItem -optionBox true
+			-annotation ("Minimise stretch settings")
+			-c "RoadkillProMinimiseOptions" m_RoadkillMinimiseOpt;
+
+		menuItem -label "Roadkill Scale to Source"
+			-annotation ("Scale all selected meshes UVs to source mesh")
+ 			-c "RoadkillProScaleToSource" m_RoadkillScaleToSource;
+
+		menuItem -label "Roadkill Scale and Pack UVs"
+			-annotation ("Relative scale the UV Islands and pack")
+ 			-c "RoadkillProScalePack" m_RoadkillScalePackUVs;
+
+		menuItem -label "Roadkill Pack UVs"
+			-annotation ("Pack all selected to UV window")
+			-c "RoadkillProPack" m_RoadkillPackUVs;
+
+		menuItem -optionBox true
+			-annotation ("UV Packer settings")
+			-c "RoadkillProPackOptions" m_RoadkillPackUVsOpt;
+
+		menuItem -label "Roadkill Symmetry Cut"
+			-annotation ("Apply UV cuts symmetrically")
+			-c "RoadkillProSymmetryCut" m_RoadkillSymCutUVs;
+
+		$gRoadkillItemAddTest = 1;
+	}
+	return "RemoveRoadkillMenuItems()";
+}
+
+
+global proc RemoveRoadkillMenuItems()
+{
+	global int $gRoadkillItemAddTest; 
+	if ($gRoadkillItemAddTest == 1)
+	{
+		deleteUI -mi m_RoadkillGeometric;
+		deleteUI -mi m_RoadkillOrganic;
+		deleteUI -mi m_RoadkillStraighten;
+		deleteUI -mi m_RoadkillMinimise;
+		deleteUI -mi m_RoadkillMinimiseOpt;
+		deleteUI -mi m_RoadkillScaleToSource;
+		deleteUI -mi m_RoadkillScalePackUVs;
+		deleteUI -mi m_RoadkillPackUVs;
+		deleteUI -mi m_RoadkillPackUVsOpt;
+		deleteUI -mi m_RoadkillSymCutUVs;
+	}
+}
+
+
+
+// two small helper functions
+
+global proc textureBorderOn()
+{
+	evalDeferred( "polyOptions -db 0; polyOptions -r -dmb 1; polyOptions -sb 4.0" );
+
+}
+
+
+global proc textureBorderOff()
+{
+	evalDeferred( "polyOptions -db 0; polyOptions -r -dmb 0; polyOptions -sb 1.0" );
+
+}
+
+
+global proc string RoadkillGetUVMenu()
+{
+	global string $gMainUVMenu;
+	global string $gPolygonsMenus[];
+
+if($gMainUVMenu == "")
+{
+	return $gPolygonsMenus[7];
+}
+
+return $gMainUVMenu;
+}
+
+
+global proc RoadkillProMenu()
+{
+	global string $globRoadkill = "";
+	//global string $gPolygonsMenus[];
+	string $menu = RoadkillGetUVMenu();
+	global int $gRoadkillItemAddTest;
+
+	$gRoadkillItemAddTest = 0;
+	addMenuItemSafe($menu, "AddRoadkillMenuItems", "globRoadkill");
+}

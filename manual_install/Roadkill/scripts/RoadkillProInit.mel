@@ -1,0 +1,120 @@
+// Roadkill Professional version RC 1.044
+
+
+
+global proc string RoadkillProGetMayaVersion()
+{
+	string $mayaVersion = `about -version`;
+
+	if(startsWith($mayaVersion, "2020"))
+ 	{
+ 		return "2020";
+ 	}
+
+	if(startsWith($mayaVersion, "2019"))
+ 	{
+ 		return "2019";
+ 	}
+
+   	if(startsWith($mayaVersion, "2018"))
+ 	{
+ 		return "2018";
+ 	}
+
+	if(startsWith($mayaVersion, "2017"))
+ 	{
+ 		return "2017";
+ 	}
+
+   	if(startsWith($mayaVersion, "2016"))
+ 	{
+ 		return "2016";
+ 	}
+
+   	if(startsWith($mayaVersion, "2015"))
+ 	{
+ 		return "2015";
+ 	}
+
+   	if(startsWith($mayaVersion, "2014"))
+ 	{
+ 		return "2014";
+ 	}
+
+   	if(startsWith($mayaVersion, "2013"))
+ 	{
+ 		return "2013";
+ 	}
+
+   	if(startsWith($mayaVersion, "2012"))
+ 	{
+ 		return "2012";
+ 	}
+
+   	if(startsWith($mayaVersion, "2011"))
+ 	{
+ 		return "2011";
+ 	}
+    
+ 	if(startsWith($mayaVersion, "2010"))
+ 	{
+ 		return "2010";
+ 	}
+
+ 	if(startsWith($mayaVersion, "2009"))
+ 	{
+ 		return "2009";
+ 	}
+
+	if(startsWith($mayaVersion, "2008"))
+	{
+		return "2008";
+	}
+
+	error ("RoadkillPro: Cannot load plug-in - version of Maya not supported: " + $mayaVersion);
+	error ("Please contact:  support@RoadkillPro.com");
+  
+ 	return "failed";
+}
+
+
+
+
+global proc LoadRoadkillPlugin()
+{
+	string $version = "";
+	string $mayaVersion = `about -version`;
+
+	$version = RoadkillProGetMayaVersion();
+
+	if($version == "failed")
+	{
+		return;
+	}
+
+	if (`about -is64`)
+	{
+		$version += "_x64";
+	}
+
+
+	string $pluginName = "RoadkillPro" + $version;
+
+	
+	int $isLoaded = `pluginInfo -query -loaded -command $pluginName`;
+	if (!$isLoaded)
+	{
+		print "RoadkillPro: Loading Plug-in.\n";
+	
+		evalDeferred("autoLoadPlugin \"\" " + $pluginName + " " + $pluginName);
+
+		print "RoadkillPro: Finished Loading Plug-in.\n";
+	}
+}
+
+
+
+global proc RoadkillProInit()
+{
+	LoadRoadkillPlugin();
+}

@@ -1,0 +1,22 @@
+// Roadkill Professional version 1.042
+
+global proc RoadkillProMinimise()
+{
+	int $RKiterations = 50;
+	int $RKislandUpright = 1;
+	
+	if ( `optionVar -exists rkMinIterations` ) 
+		$RKiterations = `optionVar -q rkMinIterations`; 
+	else 
+		optionVar -intValue rkMinIterations $RKiterations; 
+
+
+	if ( `optionVar -exists rkIslandUpright` ) 
+		$RKislandUpright = `optionVar -q rkIslandUpright`; 
+	else 
+		optionVar -intValue rkIslandUpright $RKislandUpright; 
+
+
+	string $cmd = "RoadkillPro -function MINIMISE -s " + $RKiterations + " -u " + $RKislandUpright;
+	evalEcho $cmd;				// Execute The Command
+}
