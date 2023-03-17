@@ -44,7 +44,12 @@ Installer shows all detected Maya versions
 ![Step 3](https://github.com/monster-puppet/RoadKill/blob/main/instructions/installer_03.png?raw=true)
 
 
-:godmode: You can now use Roadkill. Thank you to the creators of this amazing plugin!
+You can now use Roadkill by using the tools in your UV menu in maya. 
+
+Thank you to the creators of this amazing plugin! :godmode: 
+
+![Step 4](https://github.com/monster-puppet/RoadKill/blob/main/instructions/loaded.png?raw=true)
+
 
 
 # :wastebasket: Uninstalling
