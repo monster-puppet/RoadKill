@@ -17,13 +17,23 @@ In the release folder is an installer that installs the maya module and all its 
 
 
 
-### :cd: Run the installer 
+### :cd: Option A: Run the installer 
+Some Windows 10 users reported problems using the installer. In that case do a manual install, instructions below in the next step
+
+![Installer problem](https://github.com/monster-puppet/RoadKill/blob/main/instructions/problem_installer.png?raw=true)
 
 ![Step 1](https://github.com/monster-puppet/RoadKill/blob/main/instructions/installer_01.png?raw=true)
 
 Installer shows all detected Maya versions
 
 ![Step 2](https://github.com/monster-puppet/RoadKill/blob/main/instructions/installer_02.png?raw=true)
+
+### :cd: Option B: Run the manual install
+
+- Download the folder **"manual_install"**
+- Move the **Roadkill.mod** to **C:\Users\USERNAME\Documents\maya\modules** (create the folder if it does not exist)
+- In **C:/Program Files (x86)/** create a new folder called **Roadkill**
+- Copy the plugins and scripts folder into this folder **C:/Program Files (x86)/Roadkill/**
 
 
 ### :hourglass: Load plugin
