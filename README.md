@@ -3,6 +3,7 @@
 # :bucket: Installer
 
 In the release folder is an installer that installs the maya module and all its necessary files
+EDIT: Latest installer with Maya 2024 support can be found [here]([url](https://drive.google.com/file/d/1dfIXr5BdGY8_BU6KmgykYmSyxAhh2mDn/view?usp=sharing))
 
 ### Supported versions: 
 :green_square: Maya 2018
@@ -14,6 +15,10 @@ In the release folder is an installer that installs the maya module and all its 
 :green_square: Maya 2022
 
 :green_square: Maya 2023 
+
+:green_square: Maya 2024
+
+
 
 
 
