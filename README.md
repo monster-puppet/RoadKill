@@ -19,6 +19,8 @@ In the release folder is an installer that installs the maya module and all its 
 
 :green_square: Maya 2024
 
+:green_square: Maya 2025
+
 
 
 
