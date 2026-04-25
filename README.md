@@ -7,18 +7,9 @@
 
 ---
 
-## :green_square: Supported Maya Versions
+## Supported Maya Versions
 
-| Version | Status |
-|---------|--------|
-| Maya 2026 | :white_check_mark: Supported |
-| Maya 2025 | :white_check_mark: Supported |
-| Maya 2024 | :white_check_mark: Supported |
-| Maya 2023 | :white_check_mark: Supported |
-| Maya 2022 | :white_check_mark: Supported |
-| Maya 2020 | :white_check_mark: Supported |
-| Maya 2019 | :white_check_mark: Supported |
-| Maya 2018 | :white_check_mark: Supported |
+![Maya 2018](https://img.shields.io/badge/Maya-2018-brightgreen?style=flat-square) ![Maya 2019](https://img.shields.io/badge/Maya-2019-brightgreen?style=flat-square) ![Maya 2020](https://img.shields.io/badge/Maya-2020-brightgreen?style=flat-square) ![Maya 2022](https://img.shields.io/badge/Maya-2022-brightgreen?style=flat-square) ![Maya 2023](https://img.shields.io/badge/Maya-2023-brightgreen?style=flat-square) ![Maya 2024](https://img.shields.io/badge/Maya-2024-brightgreen?style=flat-square) ![Maya 2025](https://img.shields.io/badge/Maya-2025-brightgreen?style=flat-square) ![Maya 2026](https://img.shields.io/badge/Maya-2026-brightgreen?style=flat-square)
 
 ---
 
