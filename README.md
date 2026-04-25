@@ -1,10 +1,8 @@
-# :m: Roadkill Pro for Autodesk Maya 2018-2025
+# :m: Roadkill Pro for Autodesk Maya 2018-2026
 
 # :bucket: Installer
 
-In the release folder is an installer that installs the maya module and all its necessary files
-
-**EDIT: Latest installer with Maya 2025 support can be found [here](https://drive.google.com/file/d/1dfIXr5BdGY8_BU6KmgykYmSyxAhh2mDn/view?usp=sharing "Google Drive Download")**
+Download the latest installer from the [Releases](https://github.com/monster-puppet/RoadKill/releases/latest) page.
 
 ### Supported versions: 
 :green_square: Maya 2018
@@ -20,6 +18,8 @@ In the release folder is an installer that installs the maya module and all its 
 :green_square: Maya 2024
 
 :green_square: Maya 2025
+
+:green_square: Maya 2026
 
 
 
