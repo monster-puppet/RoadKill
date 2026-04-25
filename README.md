@@ -1,70 +1,76 @@
-# :m: Roadkill Pro for Autodesk Maya 2018-2026
+# :m: Roadkill Pro for Autodesk Maya
 
-# :bucket: Installer
+> UV unwrapping plugin for Autodesk Maya — updated to support modern Maya versions.  
+> Original plugin by [Andy Swann](https://github.com/Swannotron/RoadkillProfessional), maintained by [Monster Puppet Corporation](https://www.monster-puppet.com/).
 
-Download the latest installer from the [Releases](https://github.com/monster-puppet/RoadKill/releases/latest) page.
+---
 
-### Supported versions: 
-:green_square: Maya 2018
+## :green_square: Supported Maya Versions
 
-:green_square: Maya 2019
+| Version | Status |
+|---------|--------|
+| Maya 2026 | :white_check_mark: Supported |
+| Maya 2025 | :white_check_mark: Supported |
+| Maya 2024 | :white_check_mark: Supported |
+| Maya 2023 | :white_check_mark: Supported |
+| Maya 2022 | :white_check_mark: Supported |
+| Maya 2020 | :white_check_mark: Supported |
+| Maya 2019 | :white_check_mark: Supported |
+| Maya 2018 | :white_check_mark: Supported |
 
-:green_square: Maya 2020
+---
 
-:green_square: Maya 2022
+## :bucket: Installation
 
-:green_square: Maya 2023 
+Download the latest installer from the **[Releases](https://github.com/monster-puppet/RoadKill/releases/latest)** page.
 
-:green_square: Maya 2024
+### Option A — Installer (recommended)
 
-:green_square: Maya 2025
-
-:green_square: Maya 2026
-
-
-
-
-
-### :cd: Option A: Run the installer 
-Some Windows 10 users reported problems using the installer. In that case do a manual install, instructions below in the next step
-
-![Installer problem](https://github.com/monster-puppet/RoadKill/blob/main/instructions/problem_installer.png?raw=true)
+Run `Roadkill_Maya_Windows.exe`. The installer detects which Maya versions are present on your machine and lets you choose which ones to install for.
 
 ![Step 1](https://github.com/monster-puppet/RoadKill/blob/main/instructions/installer_01.png?raw=true)
 
-Installer shows all detected Maya versions
-
 ![Step 2](https://github.com/monster-puppet/RoadKill/blob/main/instructions/installer_02.png?raw=true)
 
-### :cd: Option B: Run the manual install
+> **Note:** Some Windows 10 users have reported issues with the installer. If that happens, use the manual install below.
+>
+> ![Installer problem](https://github.com/monster-puppet/RoadKill/blob/main/instructions/problem_installer.png?raw=true)
 
-- Download the folder **"manual_install"**
-- Move the **Roadkill.mod** to **C:\Users\USERNAME\Documents\maya\modules** (create the folder if it does not exist)
-- In **C:/Program Files (x86)/** create a new folder called **Roadkill**
-- Copy the plugins and scripts folder into this folder **C:/Program Files (x86)/Roadkill/**
+---
 
+### Option B — Manual install
 
-### :hourglass: Load plugin
-- Open Maya
-- Go to Windows -> Settings -> Preferences -> Plugin Manager
-- Enable load and autoload checkbox
+1. Download the **`manual_install`** folder from this repo.
+2. Copy **`Roadkill.mod`** to `C:\Users\<USERNAME>\Documents\maya\modules` (create the folder if it doesn't exist).
+3. Create the folder `C:\Program Files (x86)\Roadkill\`.
+4. Copy the `plug-ins` and `scripts` folders into `C:\Program Files (x86)\Roadkill\`.
+
+---
+
+## :hourglass: Loading the plugin
+
+1. Open Maya.
+2. Go to **Windows → Settings/Preferences → Plug-in Manager**.
+3. Find **RoadkillPro** and enable **Loaded** and **Auto load**.
 
 ![Step 3](https://github.com/monster-puppet/RoadKill/blob/main/instructions/installer_03.png?raw=true)
 
+Roadkill tools are available in the **UV** menu.
 
-You can now use Roadkill by using the tools in your UV menu in maya. 
-
-Thank you to the creators of this amazing plugin! :godmode: 
+:godmode: Thank you to the original creators!
 
 ![Step 4](https://github.com/monster-puppet/RoadKill/blob/main/instructions/loaded.png?raw=true)
 
+---
 
+## :wastebasket: Uninstalling
 
-# :wastebasket: Uninstalling
-To uninstall type "Uninstall Roadkill" in your Start menu and run the uninstaller
+Search for **"Uninstall Roadkill"** in the Start menu and run the uninstaller.
 
-# Remarks
-This was put together by Marcus Krautwurst from [:orange_square: Monster Puppet Corporation](https://www.monster-puppet.com/) in Collaboration with [Theorycraft Games](https://www.theorycraftgames.com/)
+---
+
+## Remarks
+
+Maintained by Marcus Krautwurst at [:orange_square: Monster Puppet Corporation](https://www.monster-puppet.com/) in collaboration with [Theorycraft Games](https://www.theorycraftgames.com/).
 
 ![Monster Puppet Corporation](https://github.com/monster-puppet/RoadKill/blob/main/instructions/logo_animated_black_bg.gif?raw=true)
-
