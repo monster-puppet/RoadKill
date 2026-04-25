@@ -1,5 +1,7 @@
 # :m: Roadkill Pro for Autodesk Maya
 
+[![Download Latest Release](https://img.shields.io/github/v/release/monster-puppet/RoadKill?label=Download&style=for-the-badge&logo=github&color=brightgreen)](https://github.com/monster-puppet/RoadKill/releases/latest)
+
 > UV unwrapping plugin for Autodesk Maya — updated to support modern Maya versions.  
 > Original plugin by [Andy Swann](https://github.com/Swannotron/RoadkillProfessional), maintained by [Monster Puppet Corporation](https://www.monster-puppet.com/).
 
