@@ -73,4 +73,4 @@ Search for **"Uninstall Roadkill"** in the Start menu and run the uninstaller.
 
 Maintained by Marcus Krautwurst at [:orange_square: Monster Puppet Corporation](https://www.monster-puppet.com/) in collaboration with [Theorycraft Games](https://www.theorycraftgames.com/).
 
-![Monster Puppet Corporation](https://github.com/monster-puppet/RoadKill/blob/main/instructions/logo_animated_black_bg.gif?raw=true)
+![Monster Puppet Corporation](https://github.com/monster-puppet/RoadKill/blob/main/instructions/logo_large_r_shadow.png?raw=true)
