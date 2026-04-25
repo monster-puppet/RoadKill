@@ -57,7 +57,7 @@ Run `Roadkill_Maya_Windows.exe`. The installer detects which Maya versions are p
 
 Roadkill tools are available in the **UV** menu.
 
-:godmode: Thank you to the original creators!
+Thank you to [Andy Swann](https://github.com/Swannotron/RoadkillProfessional) for creating this incredible plugin!
 
 ![Step 4](https://github.com/monster-puppet/RoadKill/blob/main/instructions/loaded.png?raw=true)
 
