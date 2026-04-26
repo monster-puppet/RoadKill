@@ -1,4 +1,4 @@
-<img src="https://github.com/monster-puppet/RoadKill/blob/main/instructions/maya.png?raw=true" width="48" align="middle"> Roadkill Pro for Autodesk Maya
+# <img src="https://github.com/monster-puppet/RoadKill/blob/main/instructions/maya.png?raw=true" width="36" align="middle"> Roadkill Pro for Autodesk Maya
 
 [![Download All Versions](https://img.shields.io/badge/Download-All%20Versions-red?style=for-the-badge&logo=github)](https://github.com/monster-puppet/RoadKill/releases/latest)
 
@@ -9,7 +9,7 @@
 
 ## Supported Maya Versions
 
-<img src="https://github.com/monster-puppet/RoadKill/blob/main/instructions/maya.png?raw=true" width="20" align="middle"> &nbsp; 2018 &nbsp;·&nbsp; 2019 &nbsp;·&nbsp; 2020 &nbsp;·&nbsp; 2022 &nbsp;·&nbsp; 2023 &nbsp;·&nbsp; 2024 &nbsp;·&nbsp; 2025 &nbsp;·&nbsp; 2026 &nbsp;·&nbsp; 2027
+<img src="https://github.com/monster-puppet/RoadKill/blob/main/instructions/maya.png?raw=true" height="20" align="middle"> &nbsp;![Maya 2018](https://img.shields.io/badge/Maya-2018-brightgreen?style=flat-square) ![Maya 2019](https://img.shields.io/badge/Maya-2019-brightgreen?style=flat-square) ![Maya 2020](https://img.shields.io/badge/Maya-2020-brightgreen?style=flat-square) ![Maya 2022](https://img.shields.io/badge/Maya-2022-brightgreen?style=flat-square) ![Maya 2023](https://img.shields.io/badge/Maya-2023-brightgreen?style=flat-square) ![Maya 2024](https://img.shields.io/badge/Maya-2024-brightgreen?style=flat-square) ![Maya 2025](https://img.shields.io/badge/Maya-2025-brightgreen?style=flat-square) ![Maya 2026](https://img.shields.io/badge/Maya-2026-brightgreen?style=flat-square) ![Maya 2027](https://img.shields.io/badge/Maya-2027-brightgreen?style=flat-square)
 
 ---
 
