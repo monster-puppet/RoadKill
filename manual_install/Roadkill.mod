@@ -1,3 +1,9 @@
++ MAYAVERSION:2027 Roadkill any C:/Program Files (x86)/Roadkill/
+PATH+:=bin
+MAYA_PLUG_IN_PATH+:=plug-ins/2027
+icons+:=icons
+scripts+:=scripts
+
 + MAYAVERSION:2026 Roadkill any C:/Program Files (x86)/Roadkill/
 PATH+:=bin
 MAYA_PLUG_IN_PATH+:=plug-ins/2026
