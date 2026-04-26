@@ -9,7 +9,7 @@
 
 ## Supported Maya Versions
 
-![Maya 2018](https://img.shields.io/badge/Maya-2018-brightgreen?style=flat-square) ![Maya 2019](https://img.shields.io/badge/Maya-2019-brightgreen?style=flat-square) ![Maya 2020](https://img.shields.io/badge/Maya-2020-brightgreen?style=flat-square) ![Maya 2022](https://img.shields.io/badge/Maya-2022-brightgreen?style=flat-square) ![Maya 2023](https://img.shields.io/badge/Maya-2023-brightgreen?style=flat-square) ![Maya 2024](https://img.shields.io/badge/Maya-2024-brightgreen?style=flat-square) ![Maya 2025](https://img.shields.io/badge/Maya-2025-brightgreen?style=flat-square) ![Maya 2026](https://img.shields.io/badge/Maya-2026-brightgreen?style=flat-square)
+![Maya 2018](https://img.shields.io/badge/Maya-2018-brightgreen?style=flat-square) ![Maya 2019](https://img.shields.io/badge/Maya-2019-brightgreen?style=flat-square) ![Maya 2020](https://img.shields.io/badge/Maya-2020-brightgreen?style=flat-square) ![Maya 2022](https://img.shields.io/badge/Maya-2022-brightgreen?style=flat-square) ![Maya 2023](https://img.shields.io/badge/Maya-2023-brightgreen?style=flat-square) ![Maya 2024](https://img.shields.io/badge/Maya-2024-brightgreen?style=flat-square) ![Maya 2025](https://img.shields.io/badge/Maya-2025-brightgreen?style=flat-square) ![Maya 2026](https://img.shields.io/badge/Maya-2026-brightgreen?style=flat-square) ![Maya 2027](https://img.shields.io/badge/Maya-2027-brightgreen?style=flat-square)
 
 ---
 
