@@ -23,7 +23,7 @@ Run `Roadkill_Maya_Windows.exe`. The installer detects which Maya versions are p
 
 ![Step 1](https://github.com/monster-puppet/RoadKill/blob/main/instructions/roadkill1.png?raw=true)
 
-![Step 2](https://github.com/monster-puppet/RoadKill/blob/main/instructions/installer_02.png?raw=true)
+![Step 2](https://github.com/monster-puppet/RoadKill/blob/main/instructions/roadkill2.png?raw=true)
 
 > **Note:** Some Windows 10 users have reported issues with the installer. If that happens, use the manual install below.
 >
