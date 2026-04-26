@@ -21,7 +21,7 @@ Download the latest installer from the **[Releases](https://github.com/monster-p
 
 Run `Roadkill_Maya_Windows.exe`. The installer detects which Maya versions are present on your machine and lets you choose which ones to install for.
 
-![Step 1](https://github.com/monster-puppet/RoadKill/blob/main/instructions/installer_01.png?raw=true)
+![Step 1](https://github.com/monster-puppet/RoadKill/blob/main/instructions/roadkill1.png?raw=true)
 
 ![Step 2](https://github.com/monster-puppet/RoadKill/blob/main/instructions/installer_02.png?raw=true)
 
